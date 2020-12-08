@@ -10,9 +10,6 @@ lawn.src = "../Img/lawn festival looop.png";
 const youWinBG = new Image();
 youWinBG.src = "../Img/pp runner you win.png";
 
-const sound = new Audio();
-sound.src = "../js/parcels-overnight.mp3";
-
 class Game {
   constructor(context) {
     this.context = context;
@@ -41,7 +38,6 @@ class Game {
     this.lineMoveX =
       (this.canvasWidth / 2) * Math.random() + this.canvasWidth / 4;
     this.lineFinishY = this.canvasHeight * Math.random() + 500;
-    this.sound = sound;
   }
 
   deleteEveryting() {
@@ -287,6 +283,5 @@ class Game {
   startAnimation() {
     this.setControls();
     this.updateEverything(0, 0);
-    this.sound.play();
   }
 }
