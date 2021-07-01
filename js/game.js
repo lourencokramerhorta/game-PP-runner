@@ -10,6 +10,9 @@ lawn.src = "../Img/lawn festival looop.png";
 const youWinBG = new Image();
 youWinBG.src = "../Img/pp runner you win.png";
 
+const nelson = new Audio();
+nelson.src = "./nelson-ha-ha.mp3";
+
 class Game {
   constructor(context) {
     this.context = context;
@@ -22,10 +25,11 @@ class Game {
     this.canvasHeight = 1000;
     this.crowdCreationSpeed = 1000;
     this.neonLightsSpeed = 250;
-    this.level1 = [11, 12, 40, 20, 30, 15, 40, 20, 25, 15, 20, 30, 40, 15];
+    this.level1 = [15, 15, 10, 10, 30, 5, 10, 10, 30, 5];
     //this.level1 = [];
     this.festivalImg = festival;
     this.gameOverBG = gameOverBG;
+    this.nelson = nelson;
     this.youWinBG = youWinBG;
     this.lawn = lawn;
     this.lawnY = 0;
@@ -189,7 +193,7 @@ class Game {
     if (this.lawnY > this.canvasHeight) {
       this.lawnY = 0;
     } else {
-      this.lawnY += 3;
+      this.lawnY += 5;
     }
   }
 
@@ -275,6 +279,7 @@ class Game {
   youLose() {
     this.isFinished = true;
     this.didIJustWin = false;
+    this.nelson.play();
   }
   youWin() {
     this.isFinished = true;

@@ -10,7 +10,7 @@ class Person {
     this.x = Math.random() * 1000;
     this.y = Math.random() * this.crowd.height - this.crowd.height;
     this.img = person;
-    this.speed = 50;
+    this.speed = 100;
   }
 
   colisionCheck() {

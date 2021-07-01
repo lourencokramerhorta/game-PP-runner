@@ -31,7 +31,7 @@ class Crowd {
 
   moveCrowd() {
     for (let index = 0; index < this.people.length; index++) {
-      this.people[index].y += 3;
+      this.people[index].y += 5;
     }
   }
 }

@@ -35,7 +35,7 @@ class Toilet {
     }
   }
   moveToilet() {
-    this.y = this.y + 3;
+    this.y = this.y + 5;
   }
 
   checkIfEntered() {
