@@ -32,13 +32,13 @@ class Player {
       this.x = 0;
       this.y = this.game.canvasWidth - this.width;
     } else if (this.x > this.game.canvasWidth - this.width) {
-      this.speed.x = -5;
+      this.speed.x = -7;
     } else if (this.x < 0) {
-      this.speed.x = 5;
+      this.speed.x = 7;
     } else if (this.y < 0) {
-      this.speed.y = 5;
+      this.speed.y = 7;
     } else if (this.y > this.game.canvasWidth - this.width) {
-      this.speed.y = -5;
+      this.speed.y = -7;
     }
     this.x += this.speed.x;
     this.y += this.speed.y;
@@ -57,16 +57,16 @@ class Player {
   movePlayer(e) {
     switch (e.keyCode) {
       case 37:
-        this.speed.x = -5;
+        this.speed.x = -7;
         break;
       case 39:
-        this.speed.x = 5;
+        this.speed.x = 7;
         break;
       case 38:
-        this.speed.y = -5;
+        this.speed.y = -7;
         break;
       case 40:
-        this.speed.y = 5;
+        this.speed.y = 7;
         break;
     }
   }
